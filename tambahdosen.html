@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Tambah Dosen</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px;
+        }
+
+        h1 {
+            color: #2c3e50;
+        }
+
+        form {
+            background-color: #ffffff;
+            padding: 25px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #333;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        input[type="submit"] {
+            background-color: #2980b9;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #1c5980;
+        }
+
+        a {
+            margin-top: 20px;
+            display: inline-block;
+            text-decoration: none;
+            color: #2980b9;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Form Tambah Dosen</h1>
+    <form method="POST" action="/tambahdosen">
+        <label>Nama:</label>
+        <input type="text" name="nama" required>
+
+        <label>Universitas:</label>
+        <input type="text" name="univ" required>
+
+        <label>Jurusan:</label>
+        <input type="text" name="jurusan" required>
+
+        <input type="submit" value="Tambah">
+    </form>
+    <a href="/dosenhtml">← Lihat Daftar Dosen</a>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Dosen</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f8;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            background-color: #ffffff;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #2c3e50;
+            color: #fff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #ecf0f1;
+        }
+
+        tr:hover {
+            background-color: #dfe6e9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Daftar Dosen</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Nama</th>
+            <th>Universitas</th>
+            <th>Jurusan</th>
+        </tr>
+        {% for d in dosens %}
+        <tr>
+            <td>{{ d.dosen_id }}</td>
+            <td>{{ d.nama }}</td>
+            <td>{{ d.univ }}</td>
+            <td>{{ d.jurusan }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
